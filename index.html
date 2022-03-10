@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Project</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -15,6 +15,9 @@
                 <img class="logo" src="./odin-lined.png" alt="">
                 ODIN
             </div>
+            <div class="credit">
+                Photo by Halie West on unsplash
+            </div>
         </div>
         <div class="right-pane">
             <div class="upper">
@@ -22,13 +25,45 @@
                     This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.
                 </p>
                 <p class="flavor-text">
-                    You know you want to.
+                    You <em>know</em> you want to.
                 </p>
             </div>
             <div class="middle">
-                <h3>
+                <h3 class="form-title">
                     Let's do this!
                 </h3>
+                <form action="#" method="post">
+                    <div class="row">
+                        <div>
+                            <label for="firstname">*Firstname</label><br>
+                            <input id="firstname" type="text" required>
+                        </div>
+                        <div>
+                            <label for="lastname">*Lastname</label><br>
+                            <input id="lastname" type="text" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <label for="firstname">*Email</label><br>
+                            <input id="firstname" type="email" required>
+                        </div>
+                        <div>
+                            <label for="firstname">Phone number</label><br>
+                            <input id="firstname" type="text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <label for="password">*Password</label><br>
+                            <input id="password" type="password" required>
+                        </div>
+                        <div>
+                            <label for="confirm-pass">*Confirm Password</label><br>
+                            <input id="confirm-pass" type="password" required>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="bottom">
                 <input type="button" value="Create Account">

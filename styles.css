@@ -31,6 +31,10 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -67,6 +71,14 @@ main {
   max-width: 1em;
 }
 
+.credit {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
 .right-pane {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,8 +99,35 @@ main {
   padding: 0.5em;
 }
 
+.flavor-text {
+  font-size: 0.9em;
+  margin: 1em;
+}
+
 .middle {
   background-color: white;
+  -webkit-box-shadow: 0px 6px 5px -5px grey;
+          box-shadow: 0px 6px 5px -5px grey;
+}
+
+.form-title {
+  margin-left: 1.1em;
+  font-size: 0.9em;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row div {
+  margin: 0.2em;
+  margin-left: 1em;
+}
+
+label {
+  font-size: 0.67em;
 }
 
 input[type="button"] {
@@ -99,6 +138,13 @@ input[type="button"] {
   border-radius: 0.5em;
   padding: 0.7em 2em;
   border: none;
+  margin-bottom: 1em;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+}
+
+input[type="button"]:active {
+  background-color: green;
 }
 
 .subtext {
@@ -109,5 +155,9 @@ input[type="button"] {
 a {
   text-decoration: none;
   color: #596d48;
+}
+
+.bottom {
+  margin: 1em;
 }
 /*# sourceMappingURL=styles.css.map */
