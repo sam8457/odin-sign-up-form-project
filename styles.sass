@@ -1,12 +1,18 @@
+// ##### VARIABLES #####
 $bg-color: rgb(249,250,251)
 $button-color: rgb(89,109,72)
+$button-hover: rgb(99,119,82)
+$button-click: rgb(79,99,62)
 $error-color: rgb(185,28,28)
 $focus-color: rgb(29,78,216)
 
+
+
+// ##### PAGE #####
 *
     margin: 0
     padding: 0
-    // border: 2px dotted red
+    //border: 2px dotted red
     box-sizing: border-box
     font-family: Arial, Helvetica, sans-serif
 
@@ -21,7 +27,6 @@ main
     display: flex
     flex-direction: row
     flex: 1
-    
 
 
 
@@ -54,6 +59,8 @@ main
     justify-self: end
     align-self: end
 
+
+
 // ##### RIGHT PANE #####
 .right-pane
     display: flex
@@ -64,10 +71,12 @@ main
 .right-pane>*
     padding: 0.5em
 
+// # Top section
 .flavor-text
     font-size: 0.9em
     margin: 1em
 
+// # Mid section
 .middle
     background-color: white
     box-shadow: 0px 6px 5px -5px grey
@@ -86,6 +95,12 @@ main
 label
     font-size: 0.67em
 
+
+
+// # Bottom section
+.bottom
+    margin: 1em
+
 input[type="button"]
     background-color: $button-color
     color: white
@@ -97,9 +112,12 @@ input[type="button"]
     border: none
     margin-bottom: 1em
     box-shadow: 1px 1px 5px grey
-    
+
+input[type="button"]:hover
+    background-color: $button-hover
+
 input[type="button"]:active
-        background-color: green
+    background-color: $button-click
 
 .subtext
     padding-top: 1em
@@ -109,6 +127,3 @@ input[type="button"]:active
 a
     text-decoration: none
     color: $button-color
-
-.bottom
-    margin: 1em

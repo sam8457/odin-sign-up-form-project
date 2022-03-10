@@ -130,6 +130,10 @@ label {
   font-size: 0.67em;
 }
 
+.bottom {
+  margin: 1em;
+}
+
 input[type="button"] {
   background-color: #596d48;
   color: white;
@@ -143,8 +147,12 @@ input[type="button"] {
           box-shadow: 1px 1px 5px grey;
 }
 
+input[type="button"]:hover {
+  background-color: #637752;
+}
+
 input[type="button"]:active {
-  background-color: green;
+  background-color: #4f633e;
 }
 
 .subtext {
@@ -155,9 +163,5 @@ input[type="button"]:active {
 a {
   text-decoration: none;
   color: #596d48;
-}
-
-.bottom {
-  margin: 1em;
 }
 /*# sourceMappingURL=styles.css.map */
