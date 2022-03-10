@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body,
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #f9fafb;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.left-pane {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-image: url(./halie.jpg);
+  color: white;
+}
+
+.right-pane {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.right-pane > * {
+  padding: 0.5em;
+}
+
+.middle {
+  background-color: white;
+}
+
+input[type="button"] {
+  background-color: #596d48;
+  color: white;
+  font-weight: bold;
+  font-size: 0.7em;
+  border-radius: 0.5em;
+  padding: 0.7em 2em;
+  border: none;
+}
+
+.subtext {
+  padding-top: 1em;
+  font-size: 0.7em;
+}
+
+a {
+  text-decoration: none;
+  color: #596d48;
+}
+/*# sourceMappingURL=styles.css.map */

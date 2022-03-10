@@ -1,0 +1,64 @@
+$bg-color: rgb(249,250,251)
+$button-color: rgb(89,109,72)
+$error-color: rgb(185,28,28)
+$focus-color: rgb(29,78,216)
+
+*
+    margin: 0
+    padding: 0
+    // border: 2px dotted red
+    box-sizing: border-box
+    font-family: Arial, Helvetica, sans-serif
+
+html,
+body,
+main
+    height: 100%
+    width: 100%
+    background-color: $bg-color
+
+main
+    display: flex
+    flex-direction: row
+    flex: 1
+    
+.left-pane
+    display: flex
+    align-items: center
+    justify-content: center
+    flex: 1
+    background-image: url(./halie.jpg)
+    color: white
+    
+.right-pane
+    display: flex
+    flex-direction: column
+    justify-content: center
+    flex: 2
+
+.right-pane>*
+    padding: 0.5em
+
+.flavor-text
+
+.middle
+    background-color: white
+
+input[type="button"]
+    background-color: $button-color
+    color: white
+    font:
+        weight: bold
+        size: 0.7em
+    border-radius: 0.5em
+    padding: 0.7em 2em
+    border: none
+
+.subtext
+    padding-top: 1em
+    font:
+        size: 0.7em
+
+a
+    text-decoration: none
+    color: $button-color
