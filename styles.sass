@@ -6,6 +6,10 @@ $button-click: rgb(79,99,62)
 $error-color: rgb(185,28,28)
 $focus-color: rgb(29,78,216)
 
+@font-face
+    font-family: "norse-bold"
+    src: url("./Norse-Bold.otf")
+
 
 
 // ##### PAGE #####
@@ -35,29 +39,35 @@ main
     display: flex
     flex-direction: column
     align-items: center
-    justify-content: center
+    justify-content: space-between
     flex: 2
     background-image: url(./halie.jpg)
-    background-size: 200%
+    background-size: 165%
     color: white
     
 .odin
     width: 100%
     text-align: center
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 2.5em
+    background-color: rgba(0, 0, 0, 0.5)
+    font:
+        size: 2.5em
+        style: norse-bold, sans-serif
     display: flex
     align-items: center
     justify-content: center
     padding: 0.2em 0
+    margin-top: 10rem
 
 .logo
     width: 20%
     max-width: 1em
 
 .credit
-    justify-self: end
-    align-self: end
+    align-self: center
+    font-size: 0.5em
+
+.credit a
+    color: white
 
 
 
@@ -87,21 +97,51 @@ main
 
 .row
     display: flex
-
-.row div
-    margin: 0.2em
-    margin-left: 1em
+    div
+        margin: 0.2em
+        margin-left: 1em
 
 label
     font-size: 0.67em
 
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+    border: 1px solid silver
+    border-radius: 3px
+    padding: 0.2em
+    padding-left: 0.5em
+    
+.not-valid:invalid,
+    border: 1px solid red
+    border-radius: 3px
 
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+    style: none
+    box-shadow: 2px 2px 6px -3px grey
+    border: 1px solid $focus-color
+    outline: none
+
+.manualerror#main-pass,
+.manualerror#confirm-pass
+    border: 1px solid $error-color
+    border-radius: 3px
+    
+#errormsg
+    font:
+        size: 0.5em
+    margin-left: 3em
+    color: $error-color
 
 // # Bottom section
 .bottom
     margin: 1em
 
-input[type="button"]
+input[type="submit"]
     background-color: $button-color
     color: white
     font:
@@ -113,10 +153,10 @@ input[type="button"]
     margin-bottom: 1em
     box-shadow: 1px 1px 5px grey
 
-input[type="button"]:hover
+input[type="submit"]:hover
     background-color: $button-hover
 
-input[type="button"]:active
+input[type="submit"]:active
     background-color: $button-click
 
 .subtext
@@ -124,6 +164,6 @@ input[type="button"]:active
     font:
         size: 0.7em
 
-a
+.right-pane a
     text-decoration: none
     color: $button-color

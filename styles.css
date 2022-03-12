@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "norse-bold";
+  src: url("./Norse-Bold.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -38,14 +43,14 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
   background-image: url(./halie.jpg);
-  background-size: 200%;
+  background-size: 165%;
   color: white;
 }
 
@@ -54,6 +59,7 @@ main {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 2.5em;
+  font-style: norse-bold, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,6 +70,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0.2em 0;
+  margin-top: 10rem;
 }
 
 .logo {
@@ -72,11 +79,14 @@ main {
 }
 
 .credit {
-  -ms-grid-column-align: end;
-      justify-self: end;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 0.5em;
+}
+
+.credit a {
+  color: white;
 }
 
 .right-pane {
@@ -130,11 +140,49 @@ label {
   font-size: 0.67em;
 }
 
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+  border: 1px solid silver;
+  border-radius: 3px;
+  padding: 0.2em;
+  padding-left: 0.5em;
+}
+
+.not-valid:invalid {
+  border: 1px solid red;
+  border-radius: 3px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  style: none;
+  -webkit-box-shadow: 2px 2px 6px -3px grey;
+          box-shadow: 2px 2px 6px -3px grey;
+  border: 1px solid #1d4ed8;
+  outline: none;
+}
+
+.manualerror#main-pass,
+.manualerror#confirm-pass {
+  border: 1px solid #b91c1c;
+  border-radius: 3px;
+}
+
+#errormsg {
+  font-size: 0.5em;
+  margin-left: 3em;
+  color: #b91c1c;
+}
+
 .bottom {
   margin: 1em;
 }
 
-input[type="button"] {
+input[type="submit"] {
   background-color: #596d48;
   color: white;
   font-weight: bold;
@@ -147,11 +195,11 @@ input[type="button"] {
           box-shadow: 1px 1px 5px grey;
 }
 
-input[type="button"]:hover {
+input[type="submit"]:hover {
   background-color: #637752;
 }
 
-input[type="button"]:active {
+input[type="submit"]:active {
   background-color: #4f633e;
 }
 
@@ -160,7 +208,7 @@ input[type="button"]:active {
   font-size: 0.7em;
 }
 
-a {
+.right-pane a {
   text-decoration: none;
   color: #596d48;
 }
